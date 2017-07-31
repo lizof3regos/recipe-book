@@ -1,0 +1,22 @@
+{
+  "name": "recipe-book",
+  "version": "1.0.0",
+  "description": "Store, scale, and add recipes to server. Search for recipes based on ingredients or recipe name. Add ingredients to shopping list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizof3regos/recipe-book.git"
+  },
+  "author": "Liz Rego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizof3regos/recipe-book/issues"
+  },
+  "homepage": "https://github.com/lizof3regos/recipe-book#readme",
+  "dependencies": {
+    "hapi": "^16.5.0"
+  }
+}
