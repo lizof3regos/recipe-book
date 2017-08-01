@@ -19,6 +19,12 @@ server.route({
     }
 });
 
+server.route({
+    method: 'GET',
+    path:'/recipe',
+    handler: require('./src/index')
+});
+
 // Start the server
 server.start((err) => {
 

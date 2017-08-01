@@ -1,0 +1,58 @@
+{
+  "name": "salsa",
+  "ingredients": [
+    {
+      "quantity": 3,
+      "unit": "",
+      "name": "tomatoes",
+      "descriptor": "chopped"
+    },
+    {
+      "quantity": 0.5,
+      "unit": "cup",
+      "name": "onion",
+      "descriptor": "finely diced"
+    },
+    {
+      "quantity": 5,
+      "unit": "",
+      "name": "serrano chiles",
+      "descriptor": "finely chopped"
+    },
+    {
+      "quantity": 0.5,
+      "unit": "cup",
+      "name": "cilantro",
+      "descriptor": "chopped fresh"
+    },
+    {
+      "quantity": 1,
+      "unit": "teaspoon",
+      "name": "salt",
+      "descriptor": ""
+    },
+    {
+      "quantity": 2,
+      "unit": "teaspoons",
+      "name": "lime juice",
+      "descriptor": ""
+    }
+  ],
+  "directions": {
+    "prep": {
+      "hour": 0,
+      "minute": 10
+    },
+    "cook": {
+      "hour": 0,
+      "minute": 0
+    },
+    "ready in": {
+      "hour": 1,
+      "minute": 10
+    },
+    "steps": [
+      "In a medium bowl, stir together tomatoes, onion, chili peppers, cilantro, salt, and lime juice. Chill for one hour in the refrigerator before serving."
+    ]
+  }
+}

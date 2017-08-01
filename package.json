@@ -18,5 +18,8 @@
   "homepage": "https://github.com/lizof3regos/recipe-book#readme",
   "dependencies": {
     "hapi": "^16.5.0"
+  },
+  "devDependencies": {
+    "react": "^15.6.1"
   }
 }
