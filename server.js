@@ -1,9 +1,22 @@
 'use strict';
 
 const Hapi = require('hapi');
+const Hoek = require('hoek');
+const path = require('path');
 
 // Create a server with a host and port
 const server = new Hapi.Server();
+
+server.register(require('vision'), (err) => {
+    Hoek.assert(!err, err);
+
+    server.views({
+        engines: {
+            hbs: require('handlebars')
+        },
+        relativeTo: path.join(__dirname, '/src')
+    });
+});
 server.connection({
     host: 'localhost',
     port: 8000
