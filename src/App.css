@@ -22,3 +22,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.prepTime__item {
+  list-style: none;
+  float: left;
+  width: 80px;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0 .25rem;
+  border-right: solid 1px #e6e6e6;
+  color: #999;
+}
