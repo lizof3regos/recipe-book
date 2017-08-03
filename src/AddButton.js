@@ -12,11 +12,10 @@ class AddButton extends Component {
     }
 
     handleClick() {
-        if (this.state.added) {
-            $(".add-ingredient-button").removeClass("added");
-        } else {
-            $(".add-ingredient-button").addClass("added");
-        }
+        $(".add-ingredient-button").toggleClass("added");
+        $(".add-ingredient-button").addClass("button-animation").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
+            $(".add-ingredient-button").removeClass("button-animation");
+        });
         this.setState(prevState => ({
             added: !prevState.added
         }));
