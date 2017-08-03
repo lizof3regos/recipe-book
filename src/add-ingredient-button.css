@@ -15,6 +15,13 @@ button:hover {
     cursor: pointer;
 }
 
+.add-ingredient-button.added {
+    background-color: red;
+    color: darkred;
+    height: 75px;
+    width: 75px;
+}
+
 .add-ingredient-button:hover {
     height: 75px;
     width: 75px;

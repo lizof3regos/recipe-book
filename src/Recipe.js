@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import recipejson from './samplerecipe.json';
-import './add-ingredient-button.css';
+import AddButton from "./AddButton";
 
 const Fraction = require('fraction.js');
 
@@ -27,7 +27,7 @@ class Recipe extends Component {
         return (
             <div>
                 <h1>{this.state.data.name}</h1>
-                <button className="add-ingredient-button">+</button>
+                <AddButton/>
                 <ul id="ingredients-list">
                     {
                         this.state.data.ingredients.map((item) => {
