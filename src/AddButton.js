@@ -11,7 +11,8 @@ class AddButton extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
+    handleClick(event) {
+        console.log(this);
         $(".add-ingredient-button").toggleClass("added");
         $(".add-ingredient-button").addClass("button-animation").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
             $(".add-ingredient-button").removeClass("button-animation");

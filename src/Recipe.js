@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import recipejson from './samplerecipe.json';
 import AddButton from "./AddButton";
+import ScaleRecipeModule from "./ScaleRecipeModule";
+import HeartButton from "./HeartButton";
 
 const Fraction = require('fraction.js');
 
@@ -27,14 +29,15 @@ class Recipe extends Component {
         return (
             <div>
                 <h1>{this.state.data.name}</h1>
-                <AddButton/>
+                <HeartButton/>
+                <ScaleRecipeModule/>
                 <ul id="ingredients-list">
                     {
                         this.state.data.ingredients.map((item) => {
                             let unit = (item.unit) ? ' ' + item.unit : '';
                             let descriptor = (item.descriptor) ? ', ' + item.descriptor : '';
                             let quantity = new Fraction(item.quantity);
-                            return <li><label
+                            return <li style={{height: '40px'}} key={item.name}><AddButton/><label
                                 style={{float: 'left'}}>{quantity.toFraction(true)}{unit} {item.name}{descriptor}</label>
                             </li>
                         })
@@ -55,7 +58,7 @@ class Recipe extends Component {
                 <ol id="directions-steps">
                     {
                         this.state.data.directions.steps.map((item) => {
-                            return <li style={{'textAlign': 'left'}}><label>{item}</label></li>
+                            return <li key={item} style={{'textAlign': 'left'}}><label>{item}</label></li>
                         })
                     }
                 </ol>
