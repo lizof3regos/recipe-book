@@ -37,8 +37,8 @@ class Recipe extends Component {
                             let unit = (item.unit) ? ' ' + item.unit : '';
                             let descriptor = (item.descriptor) ? ', ' + item.descriptor : '';
                             let quantity = new Fraction(item.quantity);
-                            return <li style={{height: '40px'}} key={item.name}><AddButton/><label
-                                style={{float: 'left'}}>{quantity.toFraction(true)}{unit} {item.name}{descriptor}</label>
+                            return <li style={{height: '40px', 'list-style-type': 'none'}} key={item.name} data={item.name}><AddButton data={item.name}/><label
+                                style={{float: 'left', lineHeight: '40px'}}>{quantity.toFraction(true)}{unit} {item.name}{descriptor}</label>
                             </li>
                         })
                     }

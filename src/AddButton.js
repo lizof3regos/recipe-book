@@ -11,11 +11,11 @@ class AddButton extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(event) {
-        console.log(this);
-        $(".add-ingredient-button").toggleClass("added");
-        $(".add-ingredient-button").addClass("button-animation").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
-            $(".add-ingredient-button").removeClass("button-animation");
+    handleClick() {
+        let specificbutton = $(`[data='${this.props.data}']`).find(".add-ingredient-button");
+        specificbutton.toggleClass("added");
+        specificbutton.addClass("button-animation").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
+            specificbutton.removeClass("button-animation");
         });
         this.setState(prevState => ({
             added: !prevState.added
@@ -23,7 +23,7 @@ class AddButton extends Component {
     }
 
     render() {
-        return <button onClick={this.handleClick} className="add-ingredient-button">{this.state.added ? '-' : '+'}</button>;
+        return <div className="add-button-container"><button onClick={this.handleClick} className="add-ingredient-button">{this.state.added ? '-' : '+'}</button></div>;
     }
 }
 
