@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './add-ingredient-button.css';
+import '../styles/add-ingredient-button.css';
 const $ = require('jquery');
 
 class AddButton extends Component {

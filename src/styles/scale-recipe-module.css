@@ -7,7 +7,7 @@
 }
 
 .arrow-button {
-    background: url(./down-arrow.png) no-repeat;
+    background: url(../images/down-arrow.png) no-repeat;
     background-size: 30px 15px;
     height: 15px;
     display: block;

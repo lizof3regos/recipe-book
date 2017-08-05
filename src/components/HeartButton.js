@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './heart-button.css';
+import '../styles/heart-button.css';
 import $ from 'jquery';
 
 class HeartButton extends Component {
