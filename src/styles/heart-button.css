@@ -2,8 +2,8 @@
     width: 100px;
     height: 100px;
     position: relative;
-    left: 80%;
-    top: 50%;
+    left: 50%;
+    top: 40px;
     transform: translate(-50%, -50%);
     background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
     background-position: 0 0;

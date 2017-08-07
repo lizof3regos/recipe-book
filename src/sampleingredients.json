@@ -1,0 +1,22 @@
+{
+  "ingredients": [
+    {
+      "quantity": 3,
+      "unit": "",
+      "name": "tomatoes",
+      "descriptor": "chopped"
+    },
+    {
+      "quantity": 0.5,
+      "unit": "cup",
+      "name": "onion",
+      "descriptor": "finely diced"
+    },
+    {
+      "quantity": 5,
+      "unit": "",
+      "name": "serrano chiles",
+      "descriptor": "finely chopped"
+    }
+  ]
+}

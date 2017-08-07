@@ -23,6 +23,9 @@ class AddButton extends Component {
     }
 
     render() {
+        if (this.props.start === 'true') {
+            return <div className="add-button-container"><button onClick={this.handleClick} className="add-ingredient-button added">{this.state.added ? '+' : '-'}</button></div>;
+        }
         return <div className="add-button-container"><button onClick={this.handleClick} className="add-ingredient-button">{this.state.added ? '-' : '+'}</button></div>;
     }
 }
