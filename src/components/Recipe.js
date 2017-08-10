@@ -82,26 +82,35 @@ class Recipe extends Component {
             <div>
                 <div className="row">
                     <div className="col-xs-6">
-                        <div className="col-xs-8">
-                            <h1>{this.state.data.name}</h1>
+                        <div className="row">
+                            <div className="col-xs-8">
+                                <h1>{this.state.data.name}</h1>
+                            </div>
+                            <div className="col-xs-4">
+                                <HeartButton onHeartClick={this.handleHeartClick}/>
+                            </div>
                         </div>
-                        <div className="col-xs-4">
-                            <HeartButton onHeartClick={this.handleHeartClick}/>
+                        <div className="row">
+                            <ScaleRecipeModule scale={this.state.scale} onScaleChange={this.handleScaleChange}/>
                         </div>
                     </div>
                     <div className="col-xs-6">
-                        <img alt='' src={this.state.data.picture} style={{height: '100%', width: '100%', maxWidth: '500px'}}/>
+                        <img alt='' src={this.state.data.picture}
+                             style={{height: '100%', width: '100%', maxWidth: '500px'}}/>
                     </div>
                 </div>
-                <ScaleRecipeModule scale={this.state.scale} onScaleChange={this.handleScaleChange}/>
                 <ul id="ingredients-list">
                     {
                         this.state.data.ingredients.map((item) => {
                             let unit = (item.unit) ? ' ' + item.unit : '';
                             let descriptor = (item.descriptor) ? ', ' + item.descriptor : '';
                             let quantity = new Fraction(item.quantity);
-                            return <li style={{height: '40px', listStyleType: 'none', marginBottom: '5px'}} key={item.name} data={item.name}><AddButton data={item.name}/><label
-                                style={{float: 'left', lineHeight: '40px'}}>{this.scaleRecipe(this.state.scale, quantity, unit)} {item.name}{descriptor}</label>
+                            return <li style={{height: '40px', listStyleType: 'none', marginBottom: '5px'}}
+                                       key={item.name} data={item.name}><AddButton data={item.name}/><label
+                                style={{
+                                    float: 'left',
+                                    lineHeight: '40px'
+                                }}>{this.scaleRecipe(this.state.scale, quantity, unit)} {item.name}{descriptor}</label>
                             </li>
                         })
                     }
